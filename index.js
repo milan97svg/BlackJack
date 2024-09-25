@@ -5,6 +5,7 @@ let hasBlackJack = false
 let isAlive = true
 let message = "";
 const btn = document.querySelector("#btn");
+let messageEl = document.querySelector("#message-el")
 
 btn.addEventListener("click", function startGame() {
     if (sum <= 20) {
@@ -16,5 +17,6 @@ btn.addEventListener("click", function startGame() {
         message = "You're out of the game! 🥸";
         isAlive = false
     }
-    console.log(message)
+    messageEl.textContent = message;
 })
+
